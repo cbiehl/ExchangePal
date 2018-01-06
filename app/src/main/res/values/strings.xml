@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">X-Change</string>
+    <string name="buttoncalc">Exchange</string>
+    <string name="homescreencaption">ExchangePal</string>
+    <string name="betraghint">Amount</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="currency_prompt">Choose a currency</string>
+    <string name="successful_sync">Updated exchange rates</string>
+    <string name="wrongnumberformat">Please enter a valid number!</string>
+    <string name="could_not_sync">Couldn\'t sync exchange rates</string>
+    <string name="resulthint">Result</string>
+    <string name="unknown_currency">Unknown currency</string>
+    <string name="location_unknown">Could not locate your device - GPS active?</string>
+    <string name="favorites">Favorites</string>
+    <string name="update">Update exchange rates</string>
+    <string name="exchangeratestatus">Exchange rates last updated</string>
+    <string name="preference_file">exchangepalproperties</string>
+    <string name="lastusedtargetcurrency">lastusedcurrency</string>
+    <string name="lastusedorigincurrency">lastusedorigincurrency</string>
+    <string name="amountempty">Please enter a valid amount</string>
+
+    <!-- Currency ISO codes and full descriptions in the same order -->
+    <!-- Do not change the order of items in the following two string arrays -->
+    <string-array name="currencies">
+        <item>EUR</item>
+        <item>USD</item>
+        <item>CAD</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>CNY</item>
+        <item>JPY</item>
+        <item>INR</item>
+        <item>PLN</item>
+        <item>DKK</item>
+        <item>SEK</item>
+    </string-array>
+
+    <string-array name="currencies_full">
+        <item>Euro</item>
+        <item>US Dollar</item>
+        <item>Canadian Dollar</item>
+        <item>British Pound</item>
+        <item>Hong Kong Dollar</item>
+        <item>Chinese Rénmínbì</item>
+        <item>Japanese Yen</item>
+        <item>Indian Rupee</item>
+        <item>Polnish Zloty</item>
+        <item>Danish Krone</item>
+        <item>Swedish Krone</item>
+    </string-array>
+
+    <integer-array name="flags">
+        <item>@drawable/flag_of_europe</item>
+        <item>@drawable/flag_of_the_united_states</item>
+        <item>@drawable/flag_of_canada</item>
+        <item>@drawable/flag_of_the_united_kingdom</item>
+        <item>@drawable/flag_of_hongkong</item>
+        <item>@drawable/flag_of_the_peoples_republic_of_china</item>
+        <item>@drawable/flag_of_japan</item>
+        <item>@drawable/flag_of_india</item>
+        <item>@drawable/flag_of_poland</item>
+        <item>@drawable/flag_of_denmark</item>
+        <item>@drawable/flag_of_sweden</item>
+    </integer-array>
+
+</resources>

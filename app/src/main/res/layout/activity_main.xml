@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:rowCount="3"
+    android:columnCount="1"
+    tools:context="com.example.d062629.exchangepal.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:padding="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/ivExchangerateStatusImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/circle"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/appbarlayout"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/tvExchangerateStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarlayout"
+        android:layout_toRightOf="@+id/ivExchangerateStatusImage"
+        android:layout_margin="5dp"
+        android:text="@string/exchangeratestatus"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvExchangerateStatus"
+        android:columnCount="4"
+        android:rowCount="3"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/labelFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/from"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:labelFor="@+id/spinnerOriginCurrency"/>
+        <Spinner
+            android:id="@+id/spinnerOriginCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/currency_prompt"
+            android:layout_row="2"
+            android:layout_column="0" />
+
+        <ImageButton
+            android:id="@+id/buttonSwapCurrencies"
+            android:background="@mipmap/ic_exchange"
+            android:layout_row="1"
+            android:layout_rowSpan="2"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_column="1"/>
+
+        <TextView
+            android:id="@+id/labelTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:labelFor="@+id/spinnerTargetCurrency"/>
+        <Spinner
+            android:id="@+id/spinnerTargetCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:prompt="@string/currency_prompt"
+            android:layout_row="2"
+            android:layout_column="2" />
+        <!-- android:entries="@array/currencies" -->
+
+    </GridLayout>
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:hint="@string/betraghint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:inputType="numberDecimal"
+        android:ems="6"
+        android:layout_below="@+id/gridLayout"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="0dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvCurrencyForAmount"
+        android:text="€"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:labelFor="@+id/editTextAmount"
+        android:layout_alignBaseline="@+id/editTextAmount"
+        android:layout_toRightOf="@+id/editTextAmount"/>
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:hint="@string/resulthint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:inputType="none"
+        android:ems="6"
+        android:layout_below="@+id/editTextAmount"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="0dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvCurrencyForResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:labelFor="@+id/editTextResult"
+        android:layout_alignBaseline="@+id/editTextResult"
+        android:layout_toRightOf="@+id/editTextResult"/>
+
+    <Button
+        android:id="@+id/buttonClearText"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@+id/editTextAmount"
+        android:layout_alignTop="@+id/editTextAmount"
+        android:background="@mipmap/ic_delete" />
+
+    <Button
+        android:id="@+id/buttonLocate"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@mipmap/ic_locate"
+        android:layout_marginTop="7dp"
+        android:layout_alignTop="@+id/editTextResult"
+        android:layout_alignStart="@+id/buttonClearText"
+        android:layout_toRightOf="@+id/editTextResult" />
+
+    <ImageButton
+        android:id="@+id/buttonExchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextResult"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/ic_convert"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/productslideshow"
+        android:scrollbars="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonExchange"
+        android:layout_marginTop="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--
+    <TextView
+        android:id="@+id/tvwhatever"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/buttonExchange"
+        android:layout_centerHorizontal="true"
+        android:text="An apple would cost you 0.80$ in the USA."/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/apfel"
+        android:layout_below="@+id/tvwhatever"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+    -->
+
+</RelativeLayout>
